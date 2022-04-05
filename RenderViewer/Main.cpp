@@ -54,7 +54,9 @@ void OnInit(Object* pSender, EventArgs args)
 	//pMesh->LoadMesh("../../Media/AIUE_V02_002/AIUE_V02_002.obj", Vector3::ZERO, 0.05f * Vector3::UNIT_SCALE, Vector3(0, 0, 0));
 	//pMesh->LoadSphere(1.5f, BSDFType::Diffuse, Color::WHITE, 32, 16, Vector3(0.0f, 3.0f, 0.0f));
 	//pMesh2->LoadMesh("../../Media/venusm.obj", BSDFType::RoughDielectric, Color(0.7f, 0.37f, 0.3f), Vector3(1.5f, 0.88f, 0.0f), 0.001f * Vector3::UNIT_SCALE, Vector3(0.0f, 0.0f, 0.0f));
-	pMesh2->LoadMesh("../../Media/dragon.obj", BSDFType::RoughDielectric, Color(0.2f, 0.5f, 0.3f), Vector3(0.0f, 1.4f, 0.0f), 5.0f * Vector3::UNIT_SCALE, Vector3(0.0f, 110.0f, 0.0f), true);
+	//pMesh2->LoadMesh("../../Media/dragon.obj", BSDFType::RoughDielectric, Color(0.2f, 0.5f, 0.3f), Vector3(0.0f, 1.4f, 0.0f), 5.0f * Vector3::UNIT_SCALE, Vector3(0.0f, 110.0f, 0.0f), true);
+    pMesh2->LoadMesh("../../EDXData/dragon.obj", BSDFType::RoughDielectric, Color(0.2f, 0.5f, 0.3f), Vector3(0.0f, 1.4f, 0.0f), 5.0f * Vector3::UNIT_SCALE, Vector3(0.0f, 110.0f, 0.0f), true);
+
 	//pMesh2->LoadMesh("../../Media/budha.obj", BSDFType::Glass, Color(0.7f, 0.37f, 0.3f), Vector3(0.0f, 0.0f, 0.0f), 0.8f * Vector3::UNIT_SCALE, Vector3(0.0f, 45.0f, 180.0f), true);
 	//pMesh3->LoadMesh("../../Media/budha.obj", BSDFType::Glass, Color(0.7f, 0.37f, 0.3f), Vector3(7.3f, 0.0f, 7.3f), 0.8f * Vector3::UNIT_SCALE, Vector3(0.0f, 45.0f, 180.0f), true);
 	//pMesh2->LoadMesh("../../Media/splash.obj", BSDFType::Glass, Color(1.0f, 1.0f, 1.0f), Vector3(4.95f, 0.06f, -4.95f), 9.9f * Vector3::UNIT_SCALE, Vector3(0.0f, 45.0f, 0.0f));
@@ -91,7 +93,8 @@ void OnInit(Object* pSender, EventArgs args)
 	pScene->AddPrimitive(pMesh2);
 	//pScene->AddPrimitive(pMesh3);
 	//pScene->AddPrimitive(pMesh4);
-	pScene->AddLight(new EnvironmentLight("../../Media/uffizi-large.hdr", pScene, 1.0f));
+	//pScene->AddLight(new EnvironmentLight("../../Media/uffizi-large.hdr", pScene, 1.0f));
+    pScene->AddLight(new EnvironmentLight("../../EDXData/uffizi-large.hdr", pScene, 1.0f));
 	//pScene->AddLight(new EnvironmentLight(Color(3.0f), Color(0.2f), 40.0f, pScene, -60.0f));
 	//pScene->AddLight(new DirectionalLight(Vector3(10.0f, 7.5f, -5.0f), Color(5000.0f), pScene, 1.0f));
 	//pScene->AddLight(new PointLight(Vector3(0.0f, 7.9f, 0.0f), Color(200.0f)));
